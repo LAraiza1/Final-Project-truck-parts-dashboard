@@ -1,0 +1,79 @@
+---
+title: "Final Project Shiny App"
+author: "Leopoldo Daniel Araiza"
+date: "`r Sys.Date()`"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Application Purpose
+# The purpose of this Shiny application is to provide an interactive interface for exploring real-world truck part listing data. The app allows users to filter listings by condition (e.g., New or Used), view a dynamic histogram of prices, and examine a searchable data table. This tool is ideal for automotive businesses, inventory managers, or data analysts.
+
+```{r}
+library(shiny)
+library(tidyverse)
+library(janitor)
+library(DT)
+library(scales)
+
+applications <- read_csv("C:/Users/danie/OneDrive/Desktop/DATA 824-Data Visualization/applications.csv") %>%
+  clean_names()
+```
+
+### Filter Listings
+
+```{r}
+selectInput("condition", "Select Item Condition:",
+            choices = c("All", unique(applications$item_condition)))
+```
+
+### Price Distribution (USD)
+
+```{r}
+renderPlot({
+  filtered_data <- if (input$condition == "All") {
+    applications
+  } else {
+    applications %>% filter(item_condition == input$condition)
+  }
+
+  ggplot(filtered_data, aes(x = price_usd)) +
+    geom_histogram(fill = "darkblue", bins = 40) +
+    scale_x_continuous(labels = dollar_format()) +
+    labs(
+      title = "Price Distribution (Filtered)",
+      x = "Price (USD)",
+      y = "Number of Listings"
+    ) +
+    theme_minimal()
+})
+```
+
+### Interactive Table
+
+```{r}
+renderDT({
+  filtered_data <- if (input$condition == "All") {
+    applications
+  } else {
+    applications %>% filter(item_condition == input$condition)
+  }
+
+  datatable(
+    filtered_data %>%
+      select(app_id, headline, price_usd, item_condition, app_register_date),
+    options = list(pageLength = 10)
+  )
+})
+```
+
+## Summary
+
+This Shiny application allows interactive exploration of truck part data.
+It demonstrates filtering, visual distribution analysis, and live table interaction.

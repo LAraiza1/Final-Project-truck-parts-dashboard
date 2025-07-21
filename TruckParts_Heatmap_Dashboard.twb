@@ -1,0 +1,559 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='applications' inline='true' name='federated.0pv5z2n04ogbbf172jlvz0h4rd0h' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='applications' name='textscan.1dfi7at0jggynu1d79tg30vbst1w'>
+            <connection class='textscan' directory='C:/Users/danie/OneDrive/Desktop/DATA 824-Data Visualization' filename='applications.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1dfi7at0jggynu1d79tg30vbst1w' name='applications.csv' table='[applications#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='app_id' ordinal='0' />
+            <column datatype='string' name='headline' ordinal='1' />
+            <column datatype='integer' name='price_gel' ordinal='2' />
+            <column datatype='integer' name='price_usd' ordinal='3' />
+            <column datatype='date' name='app_register_date' ordinal='4' />
+            <column datatype='integer' name='status_id' ordinal='5' />
+            <column datatype='integer' name='category_id' ordinal='6' />
+            <column datatype='integer' name='vehicle_type_id' ordinal='7' />
+            <column datatype='integer' name='seller_id' ordinal='8' />
+            <column datatype='string' name='item_condition' ordinal='9' />
+            <column datatype='datetime' name='insert_date' ordinal='10' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>app_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[app_id]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>app_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>headline</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[headline]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>headline</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_gel</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[price_gel]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>price_gel</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price_usd</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[price_usd]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>price_usd</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>app_register_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[app_register_date]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>app_register_date</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[status_id]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>status_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[category_id]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>category_id</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>vehicle_type_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[vehicle_type_id]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>vehicle_type_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>seller_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[seller_id]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>seller_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>item_condition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[item_condition]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>item_condition</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>insert_date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[insert_date]</local-name>
+            <parent-name>[applications.csv]</parent-name>
+            <remote-alias>insert_date</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Price Bin (USD)' datatype='integer' name='[Price Usd (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[price_usd]' peg='0' size='25' />
+      </column>
+      <column caption='applications.csv' datatype='table' name='[__tableau_internal_object_id__].[applications.csv_889B9898BC614BD98BC199EF5267B018]' role='measure' type='quantitative' />
+      <column caption='App Id' datatype='integer' name='[app_id]' role='dimension' type='ordinal' />
+      <column caption='App Register Date' datatype='date' name='[app_register_date]' role='dimension' type='ordinal' />
+      <column caption='Category Id' datatype='integer' name='[category_id]' role='dimension' type='ordinal' />
+      <column caption='Headline' datatype='string' name='[headline]' role='dimension' type='nominal' />
+      <column caption='Insert Date' datatype='datetime' name='[insert_date]' role='dimension' type='ordinal' />
+      <column caption='Item Condition' datatype='string' name='[item_condition]' role='dimension' type='nominal' />
+      <column caption='Price Gel' datatype='integer' name='[price_gel]' role='measure' type='quantitative' />
+      <column caption='Price Usd' datatype='integer' name='[price_usd]' role='measure' type='quantitative' />
+      <column caption='Seller Id' datatype='integer' name='[seller_id]' role='dimension' type='ordinal' />
+      <column caption='Status Id' datatype='integer' name='[status_id]' role='dimension' type='ordinal' />
+      <column caption='Vehicle Type Id' datatype='integer' name='[vehicle_type_id]' role='dimension' type='ordinal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/danie/AppData/Local/Temp/TableauTemp/#TableauTemp_1e3atfc0a8888i14cwqkf0giwovc.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/20/2025 11:28:57 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>app_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[app_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>app_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>applications.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>95588</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>headline</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[headline]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>headline</remote-alias>
+              <ordinal>1</ordinal>
+              <family>applications.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>13859</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_gel</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[price_gel]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_gel</remote-alias>
+              <ordinal>2</ordinal>
+              <family>applications.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>968</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price_usd</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[price_usd]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price_usd</remote-alias>
+              <ordinal>3</ordinal>
+              <family>applications.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>991</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>app_register_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[app_register_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>app_register_date</remote-alias>
+              <ordinal>4</ordinal>
+              <family>applications.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>39</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>status_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[status_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>status_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>applications.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>category_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[category_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>category_id</remote-alias>
+              <ordinal>6</ordinal>
+              <family>applications.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>944</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>vehicle_type_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[vehicle_type_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>vehicle_type_id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>applications.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>seller_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[seller_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>seller_id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>applications.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2260</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>item_condition</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[item_condition]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>item_condition</remote-alias>
+              <ordinal>9</ordinal>
+              <family>applications.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>insert_date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[insert_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>insert_date</remote-alias>
+              <ordinal>10</ordinal>
+              <family>applications.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>95588</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[applications.csv_889B9898BC614BD98BC199EF5267B018]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='applications.csv' id='applications.csv_889B9898BC614BD98BC199EF5267B018'>
+            <properties context=''>
+              <relation connection='textscan.1dfi7at0jggynu1d79tg30vbst1w' name='applications.csv' table='[applications#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='app_id' ordinal='0' />
+                  <column datatype='string' name='headline' ordinal='1' />
+                  <column datatype='integer' name='price_gel' ordinal='2' />
+                  <column datatype='integer' name='price_usd' ordinal='3' />
+                  <column datatype='date' name='app_register_date' ordinal='4' />
+                  <column datatype='integer' name='status_id' ordinal='5' />
+                  <column datatype='integer' name='category_id' ordinal='6' />
+                  <column datatype='integer' name='vehicle_type_id' ordinal='7' />
+                  <column datatype='integer' name='seller_id' ordinal='8' />
+                  <column datatype='string' name='item_condition' ordinal='9' />
+                  <column datatype='datetime' name='insert_date' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Heatmap: Condition vs Price'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='applications' name='federated.0pv5z2n04ogbbf172jlvz0h4rd0h' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0pv5z2n04ogbbf172jlvz0h4rd0h'>
+            <column caption='Price Bin (USD)' datatype='integer' name='[Price Usd (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[price_usd]' peg='0' size='25' />
+            </column>
+            <column caption='App Id' datatype='integer' name='[app_id]' role='dimension' type='ordinal' />
+            <column-instance column='[app_id]' derivation='Count' name='[cnt:app_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Item Condition' datatype='string' name='[item_condition]' role='dimension' type='nominal' />
+            <column-instance column='[Price Usd (bin)]' derivation='None' name='[none:Price Usd (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[item_condition]' derivation='None' name='[none:item_condition:nk]' pivot='key' type='nominal' />
+            <column caption='Price Usd' datatype='integer' name='[price_usd]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='20' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[cnt:app_id:qk]' palette='orange_gold_10_0' reverse='true' type='interpolated' />
+            <encoding attr='size-bar' field='[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[cnt:app_id:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[cnt:app_id:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.7999999523162842' />
+                <format attr='mark-color' value='#a72008' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[none:item_condition:nk]</rows>
+        <cols>[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[none:Price Usd (bin):ok]</cols>
+      </table>
+      <simple-id uuid='{14A0C5F9-8EE8-4CF8-BCA9-0675F4BD492B}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Heatmap: Condition vs Price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[cnt:app_id:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[none:Price Usd (bin):ok]</field>
+            <field>[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[none:app_id:ok]</field>
+            <field>[federated.0pv5z2n04ogbbf172jlvz0h4rd0h].[none:item_condition:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{921F8B22-63A9-4376-AC7E-A83A3C2534FF}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='84' name='Heatmap: Condition vs Price' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAABUCAYAAADUKzhSAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAJ0UlEQVR4nO3df1BVZR7H8bd6xbzkTYMwh7UGjRotswJBbupyiXXZCEmadVPMfmE4TOjm
+      uLvtrmZty9APXSutcNCE8leFgyy4Y6jl4IgBV1EUSsZBfkSpewVDLuj1OGf/uCig/LhcDtDs
+      +b7+O+ee5zlfRj485zz3OZ5BqqqqCKFTgwe6ACEGkgRA6JoEQOiaBEDomgRA6JoEQOiaBEDo
+      mgRA6JoEQOiaBEDomgRA6JoEQOiaBEDomgRA6JoEQOiaBEDomgRA6JoEQOiaBEDomgRA6JoE
+      QOiaBEDomgRA6JoEQOiaBEDomgRA6JoEQOiaBEDomgRA6JoEQOiaBEDomgRA6JoEQOiaYaAL
+      0DeFuuIdpKRmcsoYyuz4eUT5m3rUg6PmANsy8vihCfAKYsELv2Gsh/Oz8wdTSdl/rs3RPoQu
+      WsijXp31dp6DqSm0bxLKooWP4gWg1FG8I4XUzFMYQ2cTPy+Krso9uTOJjNIb97bW0PP6rv/Q
+      7PlkN8bfu3BsN2QEGED2/GTmJmRwNTSO2f6lrFuQyJaqHnRQkMxj81ZTgD/Bwf4Yi1YxZ+EW
+      rnVRmb+NfScbe9BhJfnb9tFxEzv5yXNJyLhKaNxs/EvXsSCx9Vwu+dFKZk4JNnfrU+ooTl/G
+      k4/N5q8b9nOqJz9aJ/2higFiUzMWBagvbj/Tsn1FLUi2qJZ3rK53UXlMPfZzm+2f/60uDlig
+      bv5BVVW1Ud21NEBduqvR9f4ad6lLA5aqHTaxZaiLAl5UW8stUJMtFtX1chvV3X+aqlqSC9Qr
+      qpv1VW5WlyxJUfOqc9XXAuapaZWuN+2sPxkBBkwpJUXjMU8Z3bJt4JGgEBqOnnD9r+rdD/Lg
+      9UsQhYrMDAq9HuIBX4AqTpd7MsKjGZutAYcr/VWdptxzBB7NNmwNN7QoLaFovJnWch8hKKSB
+      oydcrPZsDl9+fT/xzwe1XHe7Ud/dsbz3XjzTxw5z7Zwu9CcBGFAGhgxps2UwQEU1tT3txlHD
+      njfnErvBwMsfJzIZgAvU2ezkvBpBREQY5hALz6wppKGrfi7UYbPn8GpEBBFhZkIsz7CmsE0L
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

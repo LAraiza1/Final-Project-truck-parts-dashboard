@@ -1,0 +1,104 @@
+---
+title: "Truck Parts Application Insights"
+author: "Leopoldo Daniel Araiza"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Data
+
+```{r}
+library(readr)
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(ggplot2)
+library(scales)
+library(DT)
+
+
+applications <- read_csv("C:/Users/danie/OneDrive/Desktop/DATA 824-Data Visualization/applications.csv") %>%
+  clean_names()
+
+glimpse(applications)
+summary(applications)
+
+```
+
+##  Price Distribution (USD)
+
+```{r}
+
+ggplot(applications, aes(x = price_usd)) +
+  geom_histogram(fill = "steelblue", bins = 50) +
+  scale_x_continuous(labels = dollar_format()) +
+  labs(
+    title = "Distribution of Part Prices (USD)",
+    x = "Price (USD)",
+    y = "Number of Listings"
+  ) +
+  theme_minimal()
+
+```
+
+## New vs Used Items
+
+```{r}
+
+applications %>%
+  count(item_condition) %>%
+  ggplot(aes(x = item_condition, y = n, fill = item_condition)) +
+  geom_col() +
+  labs(
+    title = "Item Condition Breakdown",
+    x = "Condition",
+    y = "Listings"
+  ) +
+  theme_minimal()
+
+```
+
+## Listings Over Time
+
+```{r}
+
+applications %>%
+  mutate(month = floor_date(app_register_date, "month")) %>%
+  count(month) %>%
+  ggplot(aes(x = month, y = n)) +
+  geom_line(color = "darkgreen", size = 1.2) +
+  labs(
+    title = "Listings Over Time",
+    x = "Month",
+    y = "Number of Listings"
+  ) +
+  theme_minimal()
+```
+
+## Interactive Table (Top Listings by Date)
+
+```{r}
+
+datatable(
+  applications %>%
+    select(app_id, headline, price_usd, item_condition, app_register_date) %>%
+    arrange(desc(app_register_date)),
+  options = list(pageLength = 10)
+)
+
+```
+
+## Summary: Summary Insights
+
+# Listings are overwhelmingly "New" parts.
+
+# Majority of items fall under $100 USD.
+
+# Listing activity peaked in fall 2024, possibly due to seasonal demand or promotions.
+
+# This data can help parts managers adjust inventory and monitor market trends.
